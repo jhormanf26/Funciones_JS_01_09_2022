@@ -1,11 +1,12 @@
 
 
-let imagen="imagenes/Esfera.png";
-let a = Number(prompt(`Ingrese radio  de la Esfera`,1));
+let imagen="imagenes/Cono.png";
+let a = Number(prompt(`Ingrese el radio  del Cono`,1));
+let b = Number(prompt(`Ingrese la generatriz  del Cono`,1));
 
 
-function areaEsfera(radio){
-    return 4*Math.PI*radio*radio;
+function areaCono(radio,generatriz){
+    return Math.PI*radio*generatriz;
 }
 
 function imprimir(titulo , texto){
@@ -13,5 +14,5 @@ function imprimir(titulo , texto){
         console.log(texto)
     console.groupEnd();
 }
-imprimir(`El area del Esfera :`,`${areaEsfera(a)}`);
+imprimir(`El area lateral del Cono :`,`${areaCono(a,b)}`);
 document.body.insertAdjacentHTML("afterbegin",`<img src="${imagen}">`);
