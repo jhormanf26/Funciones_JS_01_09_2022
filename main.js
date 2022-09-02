@@ -1,11 +1,11 @@
 
 
-let imagen="imagenes/Triangulo.png";
-let a = Number(prompt(`Ingrese la base del Triangulo`,1));
-let b = Number(prompt(`Ingrese la altura del Triangulo`,1));
+let imagen="imagenes/Rombo.png";
+let a = Number(prompt(`Ingrese la diagonal mayor del Rombo`,1));
+let b = Number(prompt(`Ingrese la diagonal menor del Rombo`,1));
 
-function areaTriangulo(base , altura){
-    return (base*altura)/2;
+function areaRombo(diagonalMenor ,diagonalMayor){
+    return (diagonalMayor*diagonalMenor)/2;
 }
 
 function imprimir(titulo , texto){
@@ -13,5 +13,5 @@ function imprimir(titulo , texto){
         console.log(texto)
     console.groupEnd();
 }
-imprimir(`El area del Triangulo :`,`${areaTriangulo(a,b)}`);
+imprimir(`El area del Rombo :`,`${areaRombo(b,a)}`);
 document.body.insertAdjacentHTML("afterbegin",`<img src="${imagen}">`);
