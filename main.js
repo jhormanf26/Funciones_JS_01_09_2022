@@ -1,12 +1,11 @@
 
 
-let imagen="imagenes/Cono.png";
-let a = Number(prompt(`Ingrese el radio  del Cono`,1));
-let b = Number(prompt(`Ingrese la generatriz  del Cono`,1));
+let imagen="imagenes/Cubo.png";
+let a = Number(prompt(`Ingrese la arista del Cubo`,1));
 
 
-function areaCono(radio,generatriz){
-    return Math.PI*radio*generatriz;
+function volumenCubo(arista){
+    return arista*arista*arista;
 }
 
 function imprimir(titulo , texto){
@@ -14,5 +13,5 @@ function imprimir(titulo , texto){
         console.log(texto)
     console.groupEnd();
 }
-imprimir(`El area lateral del Cono :`,`${areaCono(a,b)}`);
+imprimir(`El Volumen  del Cubo :`,`${volumenCubo(a)}`);
 document.body.insertAdjacentHTML("afterbegin",`<img src="${imagen}">`);
