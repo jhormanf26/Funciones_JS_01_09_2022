@@ -1,13 +1,11 @@
 
 
-let imagen="imagenes/Poligono.png";
-let a = Number(prompt(`Ingrese el numero de lados  del Poligono`,1));
-let b = Number(prompt(`Ingrese el lado del Poligono`,1));
-let c = Number(prompt(`Ingrese el apotema del Poligono`,1));
+let imagen="imagenes/Circulo.png";
+let a = Number(prompt(`Ingrese radio  del Circulo`,1));
 
 
-function areaPoligono(numeroLados ,lado,apotema){
-    return ((numeroLados*lado*apotema)/2);
+function areaCirculo(radio){
+    return Math.PI*radio*radio;
 }
 
 function imprimir(titulo , texto){
@@ -15,5 +13,5 @@ function imprimir(titulo , texto){
         console.log(texto)
     console.groupEnd();
 }
-imprimir(`El area del Poligono Regular:`,`${areaPoligono(a,b,c)}`);
+imprimir(`El area del Circulo :`,`${areaCirculo(a)}`);
 document.body.insertAdjacentHTML("afterbegin",`<img src="${imagen}">`);
