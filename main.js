@@ -1,12 +1,11 @@
 
 
-let imagen="imagenes/Ortoedro.png";
-let a = Number(prompt(`Ingrese el largo del Ortoedro`,1));
-let b = Number(prompt(`Ingrese el ancho del Ortoedro`,1));
-let c = Number(prompt(`Ingrese el alto del Ortoedro`,1));
+let imagen="imagenes/Prisma.png";
+let a = Number(prompt(`Ingrese el area de la base del Prisma`,1));
+let b = Number(prompt(`Ingrese el alto del Prisma`,1));
 
-function volumenOrtoedro(largo,ancho,alto){
-    return largo*ancho*alto;
+function volumenPrisma(areaBase,alto){
+    return areaBase*alto;
 }
 
 function imprimir(titulo , texto){
@@ -14,5 +13,5 @@ function imprimir(titulo , texto){
         console.log(texto)
     console.groupEnd();
 }
-imprimir(`El Volumen  del Ortoedro :`,`${volumenOrtoedro(a,b,c)}`);
+imprimir(`El Volumen  del Prisma :`,`${volumenPrisma(a,b)}`);
 document.body.insertAdjacentHTML("afterbegin",`<img src="${imagen}">`);
